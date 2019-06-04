@@ -31,10 +31,9 @@ let Increments = db.define('increments', {
   timestamps: false
 });
 
-// FYI, this API call will fail after June 1, 2019. The old API is deprecated. 
 db.sync({force: true}).then(() => {
   request({
-    url: 'https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Technology',
+    url: 'https://cloud.iexapis.com/v1/stock/market/collection/sector?collectionName=Technology&token=pk_0731786ef98d4600991894316555c35f',
     headers: {
       'Content-type': 'application/json'
     }
