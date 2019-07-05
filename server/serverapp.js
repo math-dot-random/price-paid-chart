@@ -79,13 +79,5 @@ app.get('/api/stocks/', (req, res) => {
   });
 });
 
-app.get('/api/stocks/test', (req, res) => {
-  getTestList((err, results) => {
-    if (err) {
-      throw err;
-    } else {
-      res.send(results);
-    }
-  });
-});
+
 module.exports = app;
