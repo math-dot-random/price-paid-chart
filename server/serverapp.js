@@ -35,21 +35,7 @@ const getPricePaid = (ticker, callback) => {
       callback(err, result);
     }
   });
-  // database.Stocks.findAll({
-  //   attributes: ['id'],
-  //   where: {
-  //     ticker
-  //   }
-  // })
-  //   .then(data => database.Increments.findAll({
-  //     where: {stockId: data[0].id},
-  //     include: [{
-  //       model: 'database.Stocks',
-  //       required: true,
-  //     }]
-  //   }))
-  //   .then(data => callback(null, data))
-  //   .catch(error => callback(error, data));
+
 };
 
 var getTestList = function(callback) {
@@ -63,7 +49,7 @@ var getTestList = function(callback) {
 };
 
 
-// app.get('/', (req, res) => res.send('Hello World!'))
+
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/json
 app.use(bodyParser.json());
